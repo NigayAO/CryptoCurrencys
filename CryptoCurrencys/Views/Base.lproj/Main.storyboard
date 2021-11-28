@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CryptoCurrencys" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oc-eW-VHH">
+                                <rect key="frame" x="16" y="479" width="288" height="31"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.66666666669999997" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Convert">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="eQC-sM-8Uo"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-tY-cQ8">
+                                <rect key="frame" x="0.0" y="220" width="320" height="162"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DWX-Ks-wHu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="k7r-bA-eBj"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIK-VL-7Jg">
+                                <rect key="frame" x="16" y="32" width="288" height="100"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.66666666669999997" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4K8-Lf-5AJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yb3-1m-muZ">
+                                <rect key="frame" x="94" y="157" width="132" height="32"/>
+                                <segments>
+                                    <segment title="EUR"/>
+                                    <segment title="RUB"/>
+                                    <segment title="USD"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.27058823529999998" green="0.66666666669999997" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changedSegmentContoll:" destination="BYZ-38-t0r" eventType="valueChanged" id="LEo-GQ-pTF"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.5647059083" green="0.87450981139999995" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YIK-VL-7Jg" secondAttribute="trailing" constant="16" id="Ab8-IG-fUc"/>
+                            <constraint firstItem="T4U-tY-cQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="Kpa-Fe-afU"/>
+                            <constraint firstItem="7oc-eW-VHH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Q63-2Y-4hv"/>
+                            <constraint firstItem="YIK-VL-7Jg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V6c-ZV-RS7"/>
+                            <constraint firstItem="T4U-tY-cQ8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bVk-nt-RKg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yb3-1m-muZ" secondAttribute="trailing" constant="94" id="dWf-lJ-Obv"/>
+                            <constraint firstItem="T4U-tY-cQ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fTh-AZ-ii9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T4U-tY-cQ8" secondAttribute="bottom" constant="186" id="ks8-Yq-9mQ"/>
+                            <constraint firstItem="Yb3-1m-muZ" firstAttribute="top" secondItem="YIK-VL-7Jg" secondAttribute="bottom" constant="25" id="lUO-kb-FQ2"/>
+                            <constraint firstItem="Yb3-1m-muZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="mIh-po-2HE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oc-eW-VHH" secondAttribute="trailing" constant="16" id="o8c-s5-Kn4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7oc-eW-VHH" secondAttribute="bottom" constant="58" id="qG7-FO-nPC"/>
+                            <constraint firstItem="YIK-VL-7Jg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="zFb-DW-OSf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zU2-bL-UEW"/>
+                    <connections>
+                        <outlet property="pickerView" destination="T4U-tY-cQ8" id="kA5-mk-KES"/>
+                        <outlet property="resultLabel" destination="YIK-VL-7Jg" id="xBh-YD-57c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="78.16901408450704"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0D8FC12753CAF7009877B5 /* CurrentCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D8FC02753CAF7009877B5 /* CurrentCrypto.swift */; };
 		1D66015B27522CB7005E8FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015A27522CB7005E8FA9 /* AppDelegate.swift */; };
 		1D66015D27522CB7005E8FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015C27522CB7005E8FA9 /* SceneDelegate.swift */; };
-		1D66015F27522CB7005E8FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015E27522CB7005E8FA9 /* ViewController.swift */; };
+		1D66015F27522CB7005E8FA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015E27522CB7005E8FA9 /* MainViewController.swift */; };
 		1D66016227522CB7005E8FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D66016027522CB7005E8FA9 /* Main.storyboard */; };
 		1D66016427522CB7005E8FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D66016327522CB7005E8FA9 /* Assets.xcassets */; };
 		1D66016727522CB7005E8FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D66016527522CB7005E8FA9 /* LaunchScreen.storyboard */; };
+		1D66016F27522D27005E8FA9 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66016E27522D27005E8FA9 /* CurrencyModel.swift */; };
+		1D66017427522D7F005E8FA9 /* NetworkCryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66017327522D7F005E8FA9 /* NetworkCryptoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D0D8FC02753CAF7009877B5 /* CurrentCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCrypto.swift; sourceTree = "<group>"; };
 		1D66015727522CB7005E8FA9 /* CryptoCurrencys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrencys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D66015A27522CB7005E8FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D66015C27522CB7005E8FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1D66015E27522CB7005E8FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D66015E27522CB7005E8FA9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1D66016127522CB7005E8FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D66016327522CB7005E8FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D66016627522CB7005E8FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D66016827522CB7005E8FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D66016E27522D27005E8FA9 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		1D66017327522D7F005E8FA9 /* NetworkCryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCryptoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				1D66015A27522CB7005E8FA9 /* AppDelegate.swift */,
 				1D66015C27522CB7005E8FA9 /* SceneDelegate.swift */,
-				1D66015E27522CB7005E8FA9 /* ViewController.swift */,
-				1D66016027522CB7005E8FA9 /* Main.storyboard */,
+				1D66017227522D56005E8FA9 /* Models */,
+				1D66017127522D4C005E8FA9 /* Controllers */,
+				1D66017027522D3A005E8FA9 /* Views */,
 				1D66016327522CB7005E8FA9 /* Assets.xcassets */,
-				1D66016527522CB7005E8FA9 /* LaunchScreen.storyboard */,
 				1D66016827522CB7005E8FA9 /* Info.plist */,
 			);
 			path = CryptoCurrencys;
+			sourceTree = "<group>";
+		};
+		1D66017027522D3A005E8FA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D66016027522CB7005E8FA9 /* Main.storyboard */,
+				1D66016527522CB7005E8FA9 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D66017127522D4C005E8FA9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D66015E27522CB7005E8FA9 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D66017227522D56005E8FA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D66016E27522D27005E8FA9 /* CurrencyModel.swift */,
+				1D0D8FC02753CAF7009877B5 /* CurrentCrypto.swift */,
+				1D66017327522D7F005E8FA9 /* NetworkCryptoManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D66015F27522CB7005E8FA9 /* ViewController.swift in Sources */,
+				1D66015F27522CB7005E8FA9 /* MainViewController.swift in Sources */,
 				1D66015B27522CB7005E8FA9 /* AppDelegate.swift in Sources */,
+				1D0D8FC12753CAF7009877B5 /* CurrentCrypto.swift in Sources */,
+				1D66017427522D7F005E8FA9 /* NetworkCryptoManager.swift in Sources */,
+				1D66016F27522D27005E8FA9 /* CurrencyModel.swift in Sources */,
 				1D66015D27522CB7005E8FA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +342,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +370,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
