@@ -17,3 +17,15 @@ struct Currency: Decodable {
         case rate
     }
 }
+
+struct Crypto {
+    let cost: Double
+    
+    var getCostString: String {
+        String(format: "%.2f", cost)
+    }
+    
+    init? (for currency: Currency) {
+        cost = currency.rate
+    }
+}

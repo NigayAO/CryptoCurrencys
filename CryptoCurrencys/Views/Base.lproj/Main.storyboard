@@ -40,22 +40,39 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="k7r-bA-eBj"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIK-VL-7Jg">
-                                <rect key="frame" x="16" y="32" width="288" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="end-nc-vTX">
+                                <rect key="frame" x="16" y="12" width="288" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIK-VL-7Jg">
+                                        <rect key="frame" x="16" y="14" width="256" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="7Yc-ZS-YRq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.27058823529999998" green="0.66666666669999997" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="4K8-Lf-5AJ"/>
+                                    <constraint firstItem="YIK-VL-7Jg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="end-nc-vTX" secondAttribute="leading" id="2fi-J4-YBn"/>
+                                    <constraint firstItem="YIK-VL-7Jg" firstAttribute="centerX" secondItem="end-nc-vTX" secondAttribute="centerX" id="Ice-9r-Hkk"/>
+                                    <constraint firstItem="YIK-VL-7Jg" firstAttribute="centerY" secondItem="end-nc-vTX" secondAttribute="centerY" id="LaW-dF-4UT"/>
+                                    <constraint firstAttribute="trailing" secondItem="YIK-VL-7Jg" secondAttribute="trailing" constant="16" id="wqw-Ti-JLR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </label>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yb3-1m-muZ">
                                 <rect key="frame" x="94" y="157" width="132" height="32"/>
                                 <segments>
@@ -73,19 +90,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.5647059083" green="0.87450981139999995" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YIK-VL-7Jg" secondAttribute="trailing" constant="16" id="Ab8-IG-fUc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="end-nc-vTX" secondAttribute="trailing" constant="16" id="1Jr-hJ-Lc4"/>
                             <constraint firstItem="T4U-tY-cQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="Kpa-Fe-afU"/>
+                            <constraint firstItem="end-nc-vTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Pzi-C9-by3"/>
                             <constraint firstItem="7oc-eW-VHH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Q63-2Y-4hv"/>
-                            <constraint firstItem="YIK-VL-7Jg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V6c-ZV-RS7"/>
                             <constraint firstItem="T4U-tY-cQ8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bVk-nt-RKg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yb3-1m-muZ" secondAttribute="trailing" constant="94" id="dWf-lJ-Obv"/>
+                            <constraint firstItem="end-nc-vTX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="dbd-La-b6I"/>
+                            <constraint firstItem="Yb3-1m-muZ" firstAttribute="top" secondItem="end-nc-vTX" secondAttribute="bottom" constant="17" id="e58-dh-6yR"/>
                             <constraint firstItem="T4U-tY-cQ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fTh-AZ-ii9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T4U-tY-cQ8" secondAttribute="bottom" constant="186" id="ks8-Yq-9mQ"/>
-                            <constraint firstItem="Yb3-1m-muZ" firstAttribute="top" secondItem="YIK-VL-7Jg" secondAttribute="bottom" constant="25" id="lUO-kb-FQ2"/>
                             <constraint firstItem="Yb3-1m-muZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="mIh-po-2HE"/>
+                            <constraint firstItem="end-nc-vTX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mMK-Fa-bI7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oc-eW-VHH" secondAttribute="trailing" constant="16" id="o8c-s5-Kn4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7oc-eW-VHH" secondAttribute="bottom" constant="58" id="qG7-FO-nPC"/>
-                            <constraint firstItem="YIK-VL-7Jg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="zFb-DW-OSf"/>
+                            <constraint firstItem="T4U-tY-cQ8" firstAttribute="top" secondItem="Yb3-1m-muZ" secondAttribute="bottom" constant="32" id="wU4-V0-4H9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zU2-bL-UEW"/>

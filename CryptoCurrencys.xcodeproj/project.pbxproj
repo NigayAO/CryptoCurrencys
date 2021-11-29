@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D0D8FC12753CAF7009877B5 /* CurrentCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D8FC02753CAF7009877B5 /* CurrentCrypto.swift */; };
+		1D0E770D27552FC500E94E46 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E770C27552FC500E94E46 /* DataManager.swift */; };
 		1D66015B27522CB7005E8FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015A27522CB7005E8FA9 /* AppDelegate.swift */; };
 		1D66015D27522CB7005E8FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015C27522CB7005E8FA9 /* SceneDelegate.swift */; };
 		1D66015F27522CB7005E8FA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66015E27522CB7005E8FA9 /* MainViewController.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D0D8FC02753CAF7009877B5 /* CurrentCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCrypto.swift; sourceTree = "<group>"; };
+		1D0E770C27552FC500E94E46 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1D66015727522CB7005E8FA9 /* CryptoCurrencys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrencys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D66015A27522CB7005E8FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D66015C27522CB7005E8FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0E770B27552E5A00E94E46 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D66017327522D7F005E8FA9 /* NetworkCryptoManager.swift */,
+				1D0E770C27552FC500E94E46 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1D66014E27522CB7005E8FA9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +73,7 @@
 			children = (
 				1D66015A27522CB7005E8FA9 /* AppDelegate.swift */,
 				1D66015C27522CB7005E8FA9 /* SceneDelegate.swift */,
+				1D0E770B27552E5A00E94E46 /* Services */,
 				1D66017227522D56005E8FA9 /* Models */,
 				1D66017127522D4C005E8FA9 /* Controllers */,
 				1D66017027522D3A005E8FA9 /* Views */,
@@ -94,8 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				1D66016E27522D27005E8FA9 /* CurrencyModel.swift */,
-				1D0D8FC02753CAF7009877B5 /* CurrentCrypto.swift */,
-				1D66017327522D7F005E8FA9 /* NetworkCryptoManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,8 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D66015F27522CB7005E8FA9 /* MainViewController.swift in Sources */,
+				1D0E770D27552FC500E94E46 /* DataManager.swift in Sources */,
 				1D66015B27522CB7005E8FA9 /* AppDelegate.swift in Sources */,
-				1D0D8FC12753CAF7009877B5 /* CurrentCrypto.swift in Sources */,
 				1D66017427522D7F005E8FA9 /* NetworkCryptoManager.swift in Sources */,
 				1D66016F27522D27005E8FA9 /* CurrencyModel.swift in Sources */,
 				1D66015D27522CB7005E8FA9 /* SceneDelegate.swift in Sources */,
